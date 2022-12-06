@@ -47,6 +47,13 @@
                                     <outlet property="delegate" destination="9y1-6E-zCz" id="gtF-1j-EKo"/>
                                 </connections>
                             </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Tni-nO-95s">
+                                <rect key="frame" x="176.66666666666666" y="406" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JUR-YT-aPB"/>
+                                    <constraint firstAttribute="height" constant="40" id="qqV-fv-1Lg"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S2e-1z-yF2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,6 +62,8 @@
                             <constraint firstItem="S2e-1z-yF2" firstAttribute="bottom" secondItem="5ed-vz-l5G" secondAttribute="bottom" id="Axy-WW-mPd"/>
                             <constraint firstItem="5ed-vz-l5G" firstAttribute="leading" secondItem="S2e-1z-yF2" secondAttribute="leading" id="KvM-fs-Jmo"/>
                             <constraint firstItem="S2e-1z-yF2" firstAttribute="trailing" secondItem="JiY-nG-7Uk" secondAttribute="trailing" id="c5G-Lf-56V"/>
+                            <constraint firstItem="Tni-nO-95s" firstAttribute="centerX" secondItem="H0j-lN-gYb" secondAttribute="centerX" id="fTA-EJ-UTs"/>
+                            <constraint firstItem="Tni-nO-95s" firstAttribute="centerY" secondItem="H0j-lN-gYb" secondAttribute="centerY" id="fku-lQ-Hrk"/>
                             <constraint firstItem="JiY-nG-7Uk" firstAttribute="leading" secondItem="S2e-1z-yF2" secondAttribute="leading" id="gMJ-nc-TCb"/>
                             <constraint firstItem="S2e-1z-yF2" firstAttribute="trailing" secondItem="5ed-vz-l5G" secondAttribute="trailing" id="n6I-dp-FQD"/>
                             <constraint firstItem="5ed-vz-l5G" firstAttribute="top" secondItem="JiY-nG-7Uk" secondAttribute="bottom" id="ysU-Em-y7z"/>
@@ -62,6 +71,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SEARCH" id="vqN-9x-h4N"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="Tni-nO-95s" id="F2P-Mi-L3e"/>
                         <outlet property="searchBar" destination="JiY-nG-7Uk" id="KCH-nN-KHF"/>
                         <outlet property="tableView" destination="5ed-vz-l5G" id="cQR-jg-aqJ"/>
                     </connections>

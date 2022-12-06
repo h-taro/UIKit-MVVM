@@ -12,6 +12,7 @@ import THLogger
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     private let viewModel: HomeViewModel = .init()
     
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
         super.init(coder: coder)
         
         subscribeRepositories()
+        subscribeHomeViewState()
     }
     
     override func viewDidLoad() {
@@ -45,6 +47,26 @@ extension HomeViewController {
                 THLogger.debug(repositories.count)
                 
                 self.tableView.reloadData()
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func subscribeHomeViewState() {
+        viewModel.homeViewStateSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                guard let self = self else { return }
+                
+                switch state {
+                case .loading:
+                    self.startLoading()
+                    
+                case .loaded:
+                    self.stopLoading()
+
+                default:
+                    self.stopLoading()
+                }
             }
             .store(in: &cancellables)
     }
@@ -93,11 +115,25 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
 }
 
+// MARK: - UITextFieldDelegate
 extension HomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = textField.text else { return false }
         viewModel.onSearchRepositories(text)
         textField.resignFirstResponder()
         return true
+    }
+}
+
+// MARK: - LOADING
+extension HomeViewController {
+    private func startLoading() {
+        loadingIndicator.startAnimating()
+        loadingIndicator.isHidden = false
+    }
+    
+    private func stopLoading() {
+        loadingIndicator.stopAnimating()
+        loadingIndicator.isHidden = true
     }
 }
