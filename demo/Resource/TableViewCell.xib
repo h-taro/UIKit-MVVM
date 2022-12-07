@@ -21,8 +21,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xvq-QK-yN7">
                         <rect key="frame" x="16" y="8" width="329" height="60"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S3n-Hu-EOq">
-                                <rect key="frame" x="0.0" y="0.33333333333333215" width="60" height="59.333333333333343"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.dashed" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S3n-Hu-EOq">
+                                <rect key="frame" x="0.0" y="1" width="60" height="58.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="S3n-Hu-EOq" secondAttribute="height" multiplier="1:1" id="L1f-Xz-zej"/>
                                 </constraints>
@@ -55,15 +55,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="avatarImageView" destination="S3n-Hu-EOq" id="s1q-HO-Z2W"/>
                 <outlet property="label" destination="i0A-57-xiQ" id="WEn-yE-6cx"/>
                 <outlet property="subtitle" destination="gqb-xC-ZXJ" id="rQe-ZA-pbs"/>
-                <outlet property="thumbnail" destination="S3n-Hu-EOq" id="s1q-HO-Z2W"/>
             </connections>
-            <point key="canvasLocation" x="93.89312977099236" y="11.971830985915494"/>
+            <point key="canvasLocation" x="-79" y="-10"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="iphone" catalog="system" width="112" height="128"/>
+        <image name="circle.dashed" catalog="system" width="128" height="123"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

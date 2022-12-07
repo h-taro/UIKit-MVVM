@@ -5,7 +5,7 @@
 //  Created by 平石　太郎 on 2022/12/07.
 //
 
-import THApiClient
+import ApiClient
 
 struct SearchRepositoriesRequest: Requestable {
     private let query: String
@@ -13,7 +13,7 @@ struct SearchRepositoriesRequest: Requestable {
     init(query: String) {
         self.query = query
     }
-
+    
     var baseURL: String {
         "https://api.github.com"
     }

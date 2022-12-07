@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "thapiclient",
+      "identity" : "apiclient",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/h-taro/THApiClient",
+      "location" : "https://github.com/h-taro/ApiClient",
       "state" : {
-        "revision" : "93d35c38f89735351b5cce9038ee76596d067ccc",
-        "version" : "0.0.3"
+        "revision" : "da5f8f4c485cea0bb270b322929df48711857bdd",
+        "version" : "1.0.1"
       }
     },
     {

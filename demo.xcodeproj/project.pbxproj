@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7645C8782940B22B00514668 /* OwnerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7645C8772940B22B00514668 /* OwnerResponse.swift */; };
 		7665278B293F9DD50035683F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665278A293F9DD50035683F /* AppDelegate.swift */; };
 		7665278D293F9DD50035683F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665278C293F9DD50035683F /* SceneDelegate.swift */; };
 		7665278F293F9DD50035683F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665278E293F9DD50035683F /* HomeViewController.swift */; };
 		76652792293F9DD50035683F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76652790293F9DD50035683F /* Main.storyboard */; };
 		76652794293F9DD80035683F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76652793293F9DD80035683F /* Assets.xcassets */; };
 		76652797293F9DD80035683F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76652795293F9DD80035683F /* LaunchScreen.storyboard */; };
-		766527A2293FA0B50035683F /* THApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 766527A1293FA0B50035683F /* THApiClient */; };
 		766527A5293FA0F50035683F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766527A3293FA0F50035683F /* TableViewCell.swift */; };
 		766527A6293FA0F50035683F /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 766527A4293FA0F50035683F /* TableViewCell.xib */; };
 		766527A8293FA4E90035683F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766527A7293FA4E90035683F /* HomeViewModel.swift */; };
@@ -23,9 +23,12 @@
 		766527B4293FA9F40035683F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766527B3293FA9F40035683F /* APIService.swift */; };
 		766527B7293FAACD0035683F /* THLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 766527B6293FAACD0035683F /* THLogger */; };
 		766527BB293FB3D50035683F /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766527BA293FB3D50035683F /* HomeViewState.swift */; };
+		76D9BD9C2940F0D10016F3E9 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 76D9BD9B2940F0D10016F3E9 /* ApiClient */; };
+		76D9BD9E2940F5360016F3E9 /* TableViewCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9BD9D2940F5360016F3E9 /* TableViewCellState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7645C8772940B22B00514668 /* OwnerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerResponse.swift; sourceTree = "<group>"; };
 		76652787293F9DD50035683F /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7665278A293F9DD50035683F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7665278C293F9DD50035683F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		766527B0293FA9930035683F /* SearchGithubRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGithubRepositoriesResponse.swift; sourceTree = "<group>"; };
 		766527B3293FA9F40035683F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		766527BA293FB3D50035683F /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
+		76D9BD9D2940F5360016F3E9 /* TableViewCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D9BD9C2940F0D10016F3E9 /* ApiClient in Frameworks */,
 				766527B7293FAACD0035683F /* THLogger in Frameworks */,
-				766527A2293FA0B50035683F /* THApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				766527AE293FA9110035683F /* GitHubRepository.swift */,
+				7645C8772940B22B00514668 /* OwnerResponse.swift */,
 				766527B0293FA9930035683F /* SearchGithubRepositoriesResponse.swift */,
 			);
 			path = Reponse;
@@ -147,6 +152,7 @@
 				766527A7293FA4E90035683F /* HomeViewModel.swift */,
 				766527A3293FA0F50035683F /* TableViewCell.swift */,
 				766527BA293FB3D50035683F /* HomeViewState.swift */,
+				76D9BD9D2940F5360016F3E9 /* TableViewCellState.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -168,8 +174,8 @@
 			);
 			name = demo;
 			packageProductDependencies = (
-				766527A1293FA0B50035683F /* THApiClient */,
 				766527B6293FAACD0035683F /* THLogger */,
+				76D9BD9B2940F0D10016F3E9 /* ApiClient */,
 			);
 			productName = demo;
 			productReference = 76652787293F9DD50035683F /* demo.app */;
@@ -200,8 +206,8 @@
 			);
 			mainGroup = 7665277E293F9DD50035683F;
 			packageReferences = (
-				766527A0293FA0B50035683F /* XCRemoteSwiftPackageReference "THApiClient" */,
 				766527B5293FAACD0035683F /* XCRemoteSwiftPackageReference "THLogger" */,
+				76D9BD9A2940F0D10016F3E9 /* XCRemoteSwiftPackageReference "ApiClient" */,
 			);
 			productRefGroup = 76652788293F9DD50035683F /* Products */;
 			projectDirPath = "";
@@ -235,8 +241,10 @@
 				766527B1293FA9930035683F /* SearchGithubRepositoriesResponse.swift in Sources */,
 				766527AF293FA9110035683F /* GitHubRepository.swift in Sources */,
 				766527A5293FA0F50035683F /* TableViewCell.swift in Sources */,
+				7645C8782940B22B00514668 /* OwnerResponse.swift in Sources */,
 				7665278B293F9DD50035683F /* AppDelegate.swift in Sources */,
 				766527A8293FA4E90035683F /* HomeViewModel.swift in Sources */,
+				76D9BD9E2940F5360016F3E9 /* TableViewCellState.swift in Sources */,
 				7665278D293F9DD50035683F /* SceneDelegate.swift in Sources */,
 				766527B4293FA9F40035683F /* APIService.swift in Sources */,
 				766527AC293FA8580035683F /* SearchRepositoriesRequest.swift in Sources */,
@@ -466,14 +474,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		766527A0293FA0B50035683F /* XCRemoteSwiftPackageReference "THApiClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/h-taro/THApiClient";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
-			};
-		};
 		766527B5293FAACD0035683F /* XCRemoteSwiftPackageReference "THLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/h-taro/THLogger";
@@ -482,18 +482,26 @@
 				minimumVersion = 0.0.4;
 			};
 		};
+		76D9BD9A2940F0D10016F3E9 /* XCRemoteSwiftPackageReference "ApiClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/h-taro/ApiClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		766527A1293FA0B50035683F /* THApiClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 766527A0293FA0B50035683F /* XCRemoteSwiftPackageReference "THApiClient" */;
-			productName = THApiClient;
-		};
 		766527B6293FAACD0035683F /* THLogger */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 766527B5293FAACD0035683F /* XCRemoteSwiftPackageReference "THLogger" */;
 			productName = THLogger;
+		};
+		76D9BD9B2940F0D10016F3E9 /* ApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76D9BD9A2940F0D10016F3E9 /* XCRemoteSwiftPackageReference "ApiClient" */;
+			productName = ApiClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
